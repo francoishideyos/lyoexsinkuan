@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block page_head %}
+
+{% endblock %}
+
+{% block page_content %}
+<!-- Nav bar here -->
+{% include 'partials/nav.html' %}
+
+
+  
+  {% block main %}
+    
+    <header id="main-header">
+        <div class="header-content">
+            <div class="header-content-inner">
+              <br>
+              <br>
+              <br>
+                <h1>You are invited!!</h1>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="header-content-inner">
+                <h2><a href="/rsvp">Please RSVP here!!</a></h2>
+            </div>
+        </div>
+    </header>
+  
+    {% include 'partials/welcome.html' %}
+        
+    {% include 'partials/navigation.html' %}
+
+    {% include 'partials/event.html' %}
+    
+    <div id="location" class="bg-dark">
+        <!-- Google Map from https://www.embedgooglemap.net/ -->
+        <iframe width="100%" height="650" id="gmap_canvas" src="https://maps.google.com/maps?q=angel's%20share%20cafe%20taipei&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
+   
+    
+    {% include 'partials/pictures.html' %}
+
+
+
+      <div class="container">
+              <ol class="breadcrumb my-4">
+                <li class="breadcrumb-item active">Boards</li>
+              </ol>
+              <table class="table">
+                <thead class="thead-inverse">
+                  <tr>
+                    <th>Board</th>
+                    <th>Posts</th>
+                    <th>Topics</th>
+                    <th>Last Post</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for party in parties %}
+                    <tr>
+                      <td>
+                        {{ party.name }}
+                        <small class="text-muted d-block">{{ party.name }}</small>
+                      </td>
+                      <td class="align-middle">0</td>
+                      <td class="align-middle">0</td>
+                      <td></td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+  {% endblock %}
+      
+
+
+{% endblock %}
+
+{% block page_js %}
+    
+{% endblock %}
+
+  
