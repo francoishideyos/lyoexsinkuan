@@ -11,10 +11,8 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
 import os
-import django_heroku
 from .email_info import * 
 
-django_heroku.settings(locals())
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -153,3 +151,5 @@ SECURE_HSTS_SECONDS             = None
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
 SECURE_FRAME_DENY               = False
 
+import django_heroku
+django_heroku.settings(locals())

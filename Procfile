@@ -1,1 +1,1 @@
-web: gunicorn django_tasklist.wsgi --log-file -
+web: gunicorn lyoexsinkuan.wsgi --log-file -
