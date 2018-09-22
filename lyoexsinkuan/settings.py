@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
-    'django.middleware.gzip',
+    # 'django.middleware.gzip',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
