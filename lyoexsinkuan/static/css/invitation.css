@@ -56,3 +56,10 @@ body {
 #footer {
     padding-bottom: 30px;
 }
+
+/*https://stackoverflow.com/questions/21271327/bullets-next-to-django-multiple-multiplechoicefield*/
+ul
+{
+    list-style-type: none;
+    
+}

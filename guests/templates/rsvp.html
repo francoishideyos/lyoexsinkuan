@@ -4,7 +4,7 @@
 {% block page_head %}
 
     <link href="{% static 'css/invitation.css' %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
-
+    
 {% endblock %}
 
 {% block page_content %}
@@ -44,34 +44,36 @@
                             {% endfor %}
                         </ul>
                     {% endif %}
-                    <div class="form-group" data-is-child="{{ guest.is_child }}">
-
+                   <!--  <div class="form-group" data-is-child="{{ guest.is_child }}"> -->
+ <!--                    <div class="form-group">
+                        
                         <label for="{{ attending_label }}" class="col-md-3 control-label"></label>
                         
                         <label class="radio-inline">
-                            <input class="attending-radio" type="radio" name="{{ attending_label }}" value="yes" {% if guest.is_attending %}checked="checked"{% endif %} required> will attend
+                            <input class="attending-radio" type="radio" name="{{ attending_label }}" value="Yes" {% if guest.is_attending %}checked="checked"{% endif %} required> will attend
                         </label>
                         
                         <label class="radio-inline">
-                            <input class="attending-radio" type="radio" name="{{ attending_label }}" value="no" {% if guest.is_attending == False %}checked="checked"{% endif %} required> will not attend
+                            <input class="attending-radio" type="radio" name="{{ attending_label }}" value="No" {% if guest.is_attending == False %}checked="checked"{% endif %} required> will not attend
                         </label>
 
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
 
-                        <label for="{{ meal_label }}" class="col-md-3 control-label">... and will eat</label>
+<!--                         <label for="{{ meal_label }}" class="col-md-3 control-label">... and will eat</label>
 
                         <label class="radio-inline">
                             <input type="radio" name="{{ meal_label }}" id="{{ meal_label }}-yes" value="{{ meal_id }}" {% if guest.meal == meal_id %}checked="checked"{% endif %} {% if guest.is_attending == False %}disabled{% endif %} required> 
-                        </label>
+                        </label> -->
 
 
                     </div>
 
-                    <div class="form-group col-md-12">
-                        <input type="text" name="comments" class="form-control" placeholder="Questions/comments/well wishes" >
-                    </div>
+ <!--                    <div class="form-group col-md-12">
+                        <input type="text" name="comments" class="form-control" placeholder="Any food preferences/allergies? Please leave comment here" >
+                    </div> -->
+
                     <div class="form-group">
                         <div class="text-center">
                             <input type="submit" class="btn btn-primary" value="Submit Response" />
