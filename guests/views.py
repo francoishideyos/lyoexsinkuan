@@ -24,12 +24,12 @@ def rsvp(request):
             post.save()
             # https://www.youtube.com/watch?v=51mmqf5a0Ss
             # send_mail(subject, message, from_email, to_list, fail_silently=True)
-            subject = "Thank you!"
-            message_text = "Thanks for RSVP-ing, hope to see you soon!"
-            from_email = settings.EMAIL_HOST_USER
-            to_list = [post.email, settings.EMAIL_HOST_USER]
-            send_mail(subject, message_text, from_email, to_list,fail_silently=True)
-            messages.success(request, 'Thank you for RSVP-ing, looking forward to see you!')
+            # subject = "Thank you!"
+            # message_text = "Thanks for RSVP-ing, hope to see you soon!"
+            # from_email = settings.EMAIL_HOST_USER
+            # to_list = [post.email, settings.EMAIL_HOST_USER]
+            # send_mail(subject, message_text, from_email, to_list,fail_silently=True)
+            # messages.success(request, 'Thank you for RSVP-ing, looking forward to see you!')
             return redirect('../')
     else:
         form = SignUpForm()
