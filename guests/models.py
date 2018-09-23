@@ -26,8 +26,9 @@ class Guest(models.Model):
     phone_regex = RegexValidator(regex=r'^\d{9,15}$', message="Format: AreaCode+Number - 6592962824.")
     whatsapp_number = models.CharField(max_length=13) # validators should be a list
     is_attending = models.BooleanField(default=None,choices=STATE_CHOICES)
-    # is_child = models.BooleanField(default=False)
-    comments = models.CharField(max_length=1000)
+
+    # https://stackoverflow.com/questions/8609192/differentiate-null-true-blank-true-in-django
+    comments = models.CharField(max_length=1000, blank = True)
 
     # @property
     # def name(self):

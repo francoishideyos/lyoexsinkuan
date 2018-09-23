@@ -48,5 +48,5 @@ class SignUpForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'placeholder':'First Name, Last Name','size': 30}),
             'is_attending': HorizontalRadioRenderer,
             'whatsapp_number': forms.TextInput(attrs={'placeholder': 'e.g. 85291790376 (Areacode + number, NO "-"/spaces)', 'size': 50}),
-            'comments': forms.TextInput(attrs={'placeholder': 'Allergies/Food Preferences/Children/Others', 'size': 60})
+            'comments': forms.TextInput(attrs={'required':'False','placeholder': 'Allergies/Food Preferences/Children/Others', 'size': 60})
         }
