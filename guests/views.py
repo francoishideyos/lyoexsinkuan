@@ -28,7 +28,7 @@ def rsvp(request):
             message_text = "Thanks for RSVP-ing, hope to see you soon!"
             from_email = settings.EMAIL_HOST_USER
             to_list = [post.email, settings.EMAIL_HOST_USER]
-            send_mail(subject, message_text, from_email, to_list,fail_silently=True)
+            send_mail(subject, message_text, from_email, to_list,fail_silently=False)
             messages.success(request, 'Thank you for RSVP-ing, looking forward to see you!')
             return redirect('../')
     else:
