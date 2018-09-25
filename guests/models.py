@@ -21,12 +21,12 @@ class Guest(models.Model):
     )
 
     PLUS_ONE_CHOICE = (
-        (True, u'Yes!'),
-        (False, u'No.'),
+        (True, u'Yes!' ),
+        (False, u'No.' ),
     )
 
     name = models.CharField(max_length=50)
-    # last_name = models.CharField(max_length=30)
+    # last_name = models.CharField(default=False,max_length=30)
     email = models.EmailField(max_length=80)
     phone_regex = RegexValidator(regex=r'^\d{9,15}$', message="Format: AreaCode+Number - 6592962824.")
     whatsapp_number = models.CharField(max_length=13) # validators should be a list
