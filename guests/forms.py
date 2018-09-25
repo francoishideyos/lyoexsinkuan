@@ -39,7 +39,7 @@ class SignUpForm(forms.ModelForm):
     class Meta:
     	# https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms
         model = Guest
-        fields = ('email','name','whatsapp_number', 'is_attending', 'comments')
+        fields = ('email','name','whatsapp_number', 'is_attending', 'plus_one', 'additional_names','comments')
         
         # for radio buttons
         # https://stackoverflow.com/questions/30199471/how-to-specify-select-and-radioselect-in-a-modelform
@@ -47,6 +47,8 @@ class SignUpForm(forms.ModelForm):
             'email': forms.TextInput(attrs={'size': 30}),
             'name': forms.TextInput(attrs={'placeholder':'First Name, Last Name','size': 30}),
             'is_attending': HorizontalRadioRenderer,
+            'plus_one': HorizontalRadioRenderer,
             'whatsapp_number': forms.TextInput(attrs={'placeholder': 'e.g. 85291790376 (Areacode + number, NO "-"/spaces)', 'size': 50}),
+            'additional_names': forms.TextInput(attrs={'required':'False', 'placeholder':'If Yes, how many? And what are their names?', 'size': 60}),
             'comments': forms.TextInput(attrs={'required':'False','placeholder': 'Allergies/Food Preferences/Children/Others', 'size': 60})
         }
