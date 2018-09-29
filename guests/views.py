@@ -23,11 +23,10 @@ def rsvp(request):
             post = form.save(commit=False)
             post.user = request.user
             post.save()
-            name = post.cleaned_data['name']
             # https://www.youtube.com/watch?v=51mmqf5a0Ss
             # send_mail(subject, message, from_email, to_list, fail_silently=True)
             subject = "Thank you!"
-            message_text = "Dear " + str(name) + "Thank you for RSVP-ing, hope to see you soon!"
+            message_text = "Dear " + str(post.name) + ", \nThank you for RSVP-ing, hope to see you soon!"
             
             from_email = settings.EMAIL_HOST_USER
             to_list = [post.email, settings.EMAIL_HOST_USER]
