@@ -30,7 +30,8 @@ def rsvp(request):
             # send_mail(subject, message, from_email, to_list, fail_silently=True)
             subject = "Thank you!"
             message_text = "Dear " + str(post.name) + ", \nThank you for RSVP-ing, hope to see you on May 18th, 2019 at Angel's Share Cafe."
-            message_html = "<p>Dear " + str(post.name) + ", \nThank you for RSVP-ing, hope to see you on May 18th, 2019 at <a href='https://goo.gl/maps/QrJoixZJDNu' target='_blank'>Angel's Share Cafe</a> <p>"
+            #https://medium.com/django-musings/a-primer-on-sending-email-thru-django-40e3f6aa4355
+            message_html = "<p>Dear " + str(post.name) + ", <br> Thank you for RSVP-ing, hope to see you on May 18th, 2019 at <a href='https://goo.gl/maps/QrJoixZJDNu' target='_blank'>Angel's Share Cafe</a> <p>"
             from_email = settings.EMAIL_HOST_USER
             to_list = [post.email, settings.EMAIL_HOST_USER]
             
