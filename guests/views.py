@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.core.mail import send_mail
+from django.template.loader import get_template
 from .forms import SignUpForm
 from django.contrib.auth import login, authenticate
 
@@ -22,14 +23,18 @@ def rsvp(request):
             post = form.save(commit=False)
             post.user = request.user
             post.save()
+            name = post.cleaned_data['name']
             # https://www.youtube.com/watch?v=51mmqf5a0Ss
             # send_mail(subject, message, from_email, to_list, fail_silently=True)
             subject = "Thank you!"
-            message_text = "Thanks for RSVP-ing, hope to see you soon!"
+            message_text = "Dear " + str(name) + "Thank you for RSVP-ing, hope to see you soon!"
+            
             from_email = settings.EMAIL_HOST_USER
             to_list = [post.email, settings.EMAIL_HOST_USER]
+            
             send_mail(subject, message_text, from_email, to_list,fail_silently=False)
             messages.success(request, 'Thank you for RSVP-ing, looking forward to see you!')
+            
             return redirect('../')
     else:
         form = SignUpForm()
