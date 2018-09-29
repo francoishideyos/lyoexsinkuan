@@ -26,7 +26,7 @@ def rsvp(request):
             # https://www.youtube.com/watch?v=51mmqf5a0Ss
             # send_mail(subject, message, from_email, to_list, fail_silently=True)
             subject = "Thank you!"
-            message_text = "Dear " + str(post.name) + ", \nThank you for RSVP-ing, hope to see you soon!"
+            message_text = "Dear " + str(post.name) + ", \nThank you for RSVP-ing, hope to see you on May 18th, 2019 at <a href='https://goo.gl/maps/QrJoixZJDNu' target="_blank">Map</a>"
             
             from_email = settings.EMAIL_HOST_USER
             to_list = [post.email, settings.EMAIL_HOST_USER]
