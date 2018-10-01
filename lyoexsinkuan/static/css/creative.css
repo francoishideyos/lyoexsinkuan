@@ -129,6 +129,7 @@ aside {
     background-color: transparent;
 }
 
+
 @media(min-width:768px) {
     .navbar-expand-md {
         border-color: rgba(28,56,81,.3);

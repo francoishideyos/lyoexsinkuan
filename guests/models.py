@@ -21,7 +21,7 @@ class Guest(models.Model):
     )
 
     PLUS_ONE_CHOICE = (
-        (True, u'Yes!' ),
+        (True, u'Yes.' ),
         (False, u'No.' ),
     )
 

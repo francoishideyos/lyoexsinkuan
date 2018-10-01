@@ -48,7 +48,12 @@ class SignUpForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'placeholder':'First Name, Last Name','size': 30}),
             'is_attending': HorizontalRadioRenderer,
             'plus_one': HorizontalRadioRenderer,
-            'whatsapp_number': forms.TextInput(attrs={'placeholder': 'e.g. 85291790376 (Areacode + number, NO "-"/spaces)', 'size': 50}),
-            'additional_names': forms.TextInput(attrs={'required':'False', 'placeholder':'If Yes, how many? And what are their names?', 'size': 60}),
-            'comments': forms.TextInput(attrs={'required':'False','placeholder': 'Allergies/Food Preferences/Children/Others', 'size': 60})
+            'whatsapp_number': forms.TextInput(attrs={'placeholder': 'e.g. 85291790376 (Areacode+num)', 'size': 30}),
+            'additional_names': forms.TextInput(attrs={'required':'False', 'placeholder':'How many? Names?', 'size': 30}),
+            'comments': forms.TextInput(attrs={'required':'False','placeholder': 'Allergies/Preferences/Children?', 'size': 30})
+
+
+
+
+
         }
