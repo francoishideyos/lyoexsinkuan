@@ -34,7 +34,7 @@ class Guest(models.Model):
     plus_one = models.BooleanField(default=None,choices=PLUS_ONE_CHOICE)
     additional_names = models.CharField(max_length=1000, blank = True)
     # https://stackoverflow.com/questions/8609192/differentiate-null-true-blank-true-in-django
-    comments = models.CharField(max_length=1000, blank = True)
+    comments = models.CharField(max_length=1000, message="Dietary restrictions? Any children?")
 
     # @property
     # def name(self):
