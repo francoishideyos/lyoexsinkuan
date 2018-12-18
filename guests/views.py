@@ -34,34 +34,15 @@ def rsvp(request):
             message_html = "<p>Dear " + str(post.name) + """,
 				<br><br>
 
-				Thank you for RSVP-ing, we are excited to see you on <b>May 18th, 2019 (Saturday)</b> late afternoon at <b><a href='https://goo.gl/maps/QrJoixZJDNu' target='_blank'>Angel's Share Cafe</a></b>.
+				Thank you for RSVP-ing, we are looking forward to see you on <b>May 18th, 2019 (Saturday)</b> late afternoon at <b><a href='https://goo.gl/maps/QrJoixZJDNu' target='_blank'>Angel's Share Cafe</a></b>.
 				<br><br>
 
-				As most of you are traveling from either Hong Kong or Singapore, here are some flights for your consideration:
-				<br><br>
+                Please continue to check <a href="http://www.lyoexsinkuan.com/"> our website </a> or join our <a href="https://chat.whatsapp.com/8yMkUG2PbAl1vJwT2Z89lK">Whatsapp group</a> for more updates!
 
-				From <a href='https://www.skyscanner.com.hk/transport/flights/hkga/tpet/190517/190519/?adults=1&children=0&adultsv2=1&childrenv2=&infants=0&cabinclass=economy&rtn=1&preferdirects=true&outboundaltsenabled=false&inboundaltsenabled=false&ref=home&currency=HKD#results' target='_blank'>Hong Kong</a>
-				<br>
-				From <a href='https://www.skyscanner.com.hk/transport/flights/sin/tpet/190517/190519/?adults=1&children=0&adultsv2=1&childrenv2=&infants=0&cabinclass=economy&rtn=1&preferdirects=true&outboundaltsenabled=false&inboundaltsenabled=false&ref=home&currency=SGD#results' target='_blank'>Singapore</a>
-
-				<br><br>
-				For accodmodations, since the venue is near Shilin (士林), it will be convenient to stay near any major MRT stations. <br>
-				<br>
-				Some of our favorites which is right on top of Taipei station are:
-				<br>
-				<a href='https://www.trivago.hk/en?aDateRange%5Barr%5D=2019-05-17&aDateRange%5Bdep%5D=2019-05-19&aPriceRange%5Bto%5D=0&aPriceRange%5Bfrom%5D=0&iPathId=92369&aGeoCode%5Blat%5D=25.048704&aGeoCode%5Blng%5D=121.515045&iGeoDistanceItem=2227766&iGeoDistanceLimit=20000&aCategoryRange=0%2C1%2C2%2C3%2C4%2C5&aOverallLiking=1%2C2%2C3%2C4%2C5&sOrderBy=relevance%20desc&bTopDealsOnly=false&iRoomType=7&cpt=222776602&iIncludeAll=0&iViewType=0&bIsSeoPage=false&bIsSitemap=false&' target='_blank'>iTaipei</a>
-				<br>
-				<a href='https://www.trivago.hk/en?aDateRange%5Barr%5D=2019-05-17&aDateRange%5Bdep%5D=2019-05-19&aPriceRange%5Bto%5D=0&aPriceRange%5Bfrom%5D=0&iPathId=556390&aGeoCode%5Blat%5D=25.049309&aGeoCode%5Blng%5D=121.517197&iGeoDistanceItem=4164892&iGeoDistanceLimit=20000&aCategoryRange=0%2C1%2C2%2C3%2C4%2C5&aOverallLiking=1%2C2%2C3%2C4%2C5&sOrderBy=relevance%20desc&bTopDealsOnly=false&iRoomType=7&cpt=416489202&iIncludeAll=0&iViewType=0&bIsSeoPage=false&bIsSitemap=false&' target='_blank'>Taipei Beautiful Apartment</a>
-				<br><br>
-				We are looking to arrange transportation to & from the venue when the date is closer, so please keep an eye out for updates.
-
-				<br><br>
-				Thank you very much & looking forward to see you!
 				<br>
 				#lyoexsinkuan
 
 				<br><br>
-				<small>p.s. <i> Updates will be communicated through <a href="https://chat.whatsapp.com/8yMkUG2PbAl1vJwT2Z89lK">Whatsapp group</a> & <a href='https://lyoexsinkuan.com' target='_blank'>lyoexsinkuan.com</a> </i></small>
 				<p>
             """
             from_email = settings.EMAIL_HOST_USER
